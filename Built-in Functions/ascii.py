@@ -1,0 +1,1 @@
+print(ascii("MÀÑÍGÀÑDÀÑ D"))
