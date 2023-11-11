@@ -1,5 +1,5 @@
-def BMI(weight, height):
-    bmi = weight / (height ** 2)
+def getBMI(wgt, hgt):
+    bmi = wgt / (hgt ** 2)
 
     return bmi
 
@@ -7,7 +7,7 @@ def BMI(weight, height):
 weight = int(input("Enter your weight in kg: "))
 height = float(input("Enter your height in m: "))
 
-bmi = BMI(weight, height)
+bmi = getBMI(weight, height)
 
 print("BMI is {} and You are considered".format(bmi), end=" ")
 
