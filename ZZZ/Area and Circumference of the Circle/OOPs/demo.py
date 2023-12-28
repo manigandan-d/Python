@@ -19,10 +19,8 @@ c1 = Circle(5)
 c1.area()
 c1.circumference()
 
-"""
 c2 = Circle(10)
 
 c2.area()
 c2.circumference()
-"""
 
