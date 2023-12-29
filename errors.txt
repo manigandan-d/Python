@@ -1,0 +1,6 @@
+SyntaxError
+NameError
+TypeError
+ValueError
+IndentationError
+AttributeError
