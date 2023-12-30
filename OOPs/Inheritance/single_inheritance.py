@@ -1,3 +1,5 @@
+# class Human(object): -> parent class of all the parent classes 
+
 class Human: # base class - parent class - super class 
 	def __init__(self, heart):
 		self.num_eyes = 2
