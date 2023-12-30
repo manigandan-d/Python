@@ -1,4 +1,6 @@
 class Human:
+	can_breathe = True
+	
 	def __init__(self, a):
 		self.hvar = a
 	
@@ -52,4 +54,6 @@ print(b1.bvar)
 
 print(Boy.mro())
 print(Boy.__mro__)
+
+print(b1.can_breathe)
 
