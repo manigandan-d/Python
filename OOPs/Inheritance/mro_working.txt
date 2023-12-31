@@ -1,0 +1,61 @@
+C3 Linearization Algorithm uses local precedence order and monotonicity to do mro
+
+local precedence order of Z: F -> G -> H
+monotonicity: eg. if class O is inherited from N and N is inherited from M then monotonicity is O -> N -> M 
+
+class A
+class B
+class C
+class D
+class E
+class F(A, B, C)
+class G(D, B, E)
+class H(D, A)
+class Z(F, G, H)
+
+L(Z) = Z + merge(L(F), L(G), L(H), FGH)
+
+L(F) = F + merge(L(A), L(B), L(C), ABC)
+
+L(A) = A + merge(L(O), O) = AO (list)
+L(B) = B + merge(L(O), O) = BO (list)
+L(C) = C + merge(L(O), O) = CO (list)
+
+L(F) = F + merge(AO, BO, CO, ABC)
+	 = FA + merge(O, BO, CO, BC)
+	 = FAB + merge(O, O, CO, C)
+	 = FABC = merge(O, O, O)
+	 = FABCO
+
+L(G) = G + merge(L(D), L(B), L(E), DBE)
+
+L(D) = D + merge(L(O), O) = DO
+L(E) = E + merge(L(O), O) = EO
+
+L(G) = G + merge(DO, BO, EO, DBE)
+	 = GD + merge(O, BO, EO, BE)
+	 = GDB + merge(O, O, EO, E)
+	 = GDBE + merge(O, O, O)
+	 = GDBEO
+
+L(H) = H + merge(L(D), L(A), DA)
+
+L(H) = H + merge(DO, AO, DA)
+	 = HD + merge(O, AO, A)
+	 = HDA + merge(O, O)
+	 = HDAO
+
+L(Z) = Z + merge(FABCO, GDBEO, HDAO, FGH)
+	 = ZF + merge(ABCO, GDBEO, HDAO, GH)
+	 = ZFG + merge(ABCO, DBEO, HDAO, H)
+	 = ZFGH + merge(ABCO, DBEO, DAO)
+	 = ZFGHD + merge(ABCO, BEO, AO)
+	 = ZFGHDA + merge(BCO, BEO, O)
+	 = ZFGHDAB + merge(CO, EO, O)
+	 = ZFGHDABC + merge(O, EO, O)
+	 = ZFGHDABCE + merge(O, O, O)
+	 = ZFGHDABCEO
+
+newer version -> left to right and deeper
+older version -> deeper and left to right
+ 

@@ -30,6 +30,7 @@ class Male(Human): # derived class - child class - sub class
 		
 	def display(self):
 		print(f"This is {self.name}")
+
 	
 male_1 = Male("mani", 1)
 
