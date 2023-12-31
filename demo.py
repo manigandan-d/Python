@@ -26,3 +26,5 @@ d.display()
 
 print(D.mro())
 
+print(d.a)
+
