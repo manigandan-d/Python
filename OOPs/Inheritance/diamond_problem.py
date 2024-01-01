@@ -10,8 +10,9 @@ class B(A):
 		
 		
 class C(A):
-	def display(self):
-		print("Hi from C")
+	pass
+	# def display(self):
+	#	print("Hi from C")
 
 
 class D(B, C):
@@ -25,6 +26,4 @@ d = D()
 d.display()
 
 print(D.mro())
-
-print(d.a)
 
