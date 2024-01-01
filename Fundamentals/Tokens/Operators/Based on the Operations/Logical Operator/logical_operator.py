@@ -1,9 +1,8 @@
-def check():
-    return "Python"
+a = 10
+b = 5
+c = 2
 
+print((a < b) and (a > c))
+print((a < b) or (a > c))
+print(not (a<b))
 
-print(1 and check())
-print(0 and check())
-
-print(0 or check())
-print(1 or check())
