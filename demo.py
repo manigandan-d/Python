@@ -184,5 +184,17 @@ res = findMax(data)
 
 print(f"Maximum value: {res}")
 
+# remove duplicates from list 
+
+# runner-up score 
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    res = list(set(sorted(arr, reverse=True)))
+
+    print(res[1])
+
 
 
