@@ -236,3 +236,42 @@ if __name__ == '__main__':
             
         data.clear()
 
+# finding the percentage 
+
+if __name__ == '__main__':
+    n = int(input())
+
+    student_marks = {}
+    data = []
+
+    for i in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+
+        student_marks[name] = scores
+
+    query_name = input()
+
+    for i in student_marks:
+        if i == query_name:
+            data = student_marks[i]
+
+    tot = sum(data)
+    n = len(data)
+
+    avg = tot/n
+
+    print(format(avg, ".2f"))
+
+"""
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+
+2
+Harsh 25 26.5 28
+Anurag 26 28 30
+Harsh
+"""
