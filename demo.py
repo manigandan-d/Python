@@ -196,5 +196,43 @@ if __name__ == '__main__':
 
     print(res[1])
 
+# list - commands 
 
+if __name__ == '__main__':
+    N = int(input())
+    
+    res = []
+
+    data = []
+
+    commands = ["insert", "append", "remove", "pop", "sort", "reverse", "print"]
+
+    for i in range(N):
+        n = input().split()
+
+        for i in n:
+            data.append(i)
+
+        if data[0] == "insert":
+            res.insert(int(data[1]), int(data[2]))           
+
+        elif data[0] == "append":
+            res.append(int(data[1]))
+
+        elif data[0] == "remove":
+            res.remove(int(data[1]))            
+
+        elif data[0] == "pop":
+            res.pop()            
+
+        elif data[0] == "sort":
+            res.sort()
+
+        elif data[0] == "reverse":
+            res.reverse()
+
+        elif data[0] == "print":
+            print(res)
+            
+        data.clear()
 
