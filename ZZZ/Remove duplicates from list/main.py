@@ -14,7 +14,7 @@ print(res)
 
 res = list()
 
-res = [res.append(i) for i in data if i not in res]
+[res.append(i) for i in data if i not in res]
 print(res)
 
 # using set
