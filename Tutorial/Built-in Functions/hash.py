@@ -1,4 +1,4 @@
-# hasoh(obj) -> obj should be immutable
+# hash(obj) -> obj should be immutable
 
 intData = 10
 print(hash(intData))
