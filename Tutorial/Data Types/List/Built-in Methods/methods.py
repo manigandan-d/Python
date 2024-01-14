@@ -1,6 +1,5 @@
-data = [5, 10, 15, 20, 25]
+data = [5, 10, 15, 20, 25, 30]
 
-data.append(30)
 print("append -> " + str(data))
 
 data.insert(2, 12)
