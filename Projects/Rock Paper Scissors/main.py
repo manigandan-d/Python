@@ -29,30 +29,43 @@ scissors = '''
 
 game_images = [rock, paper, scissors]
 
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
+print('\nWinning rules of the game ROCK PAPER SCISSORS are :\n'
+      + "Rock vs Paper -> Paper wins \n"
+      + "Rock vs Scissors -> Rock wins \n"
+      + "Paper vs Scissors -> Scissor wins \n")
 
-if user_choice < 0 or user_choice > 2:
-    print("You typed invalid number, you lose!")
+while True:
+    user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
 
-else:
-    print(game_images[user_choice])
+    if user_choice < 0 or user_choice > 2:
+        print("You typed invalid number, you lose!")
 
-    computer_choice = random.randint(0, 2)
+    else:
+        print(game_images[user_choice])
 
-    print("Computer chose: ")
-    print(game_images[computer_choice])
+        computer_choice = random.randint(0, 2)
 
-    if user_choice == 0 and computer_choice == 2:
-        print("You win!")
+        print("Computer chose: ")
+        print(game_images[computer_choice])
 
-    elif user_choice == 2 and computer_choice == 0:
-        print("You lose!")
+        if user_choice == 0 and computer_choice == 2:
+            print("You win!")
 
-    elif user_choice > computer_choice:
-        print("You win!")
+        elif user_choice == 2 and computer_choice == 0:
+            print("You lose!")
 
-    elif user_choice < computer_choice:
-        print("You lose!")
+        elif user_choice > computer_choice:
+            print("You win!")
 
-    elif user_choice == computer_choice:
-        print("It's a draw")
+        elif user_choice < computer_choice:
+            print("You lose!")
+
+        elif user_choice == computer_choice:
+            print("It's a draw")
+
+    play = input("Do you want to play again? (y/n): ")
+
+    if play.lower() == 'n':
+        break
+
+print("\nThanks for playing\n")
