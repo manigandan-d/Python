@@ -7,3 +7,8 @@ print(res)
 
 res = pow(a, b, m)
 print(res)
+
+# sample input 
+# 3
+# 4
+# 5
