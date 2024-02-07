@@ -1,3 +1,5 @@
+# 0 1 1 2 3 5 8 13 21 ...
+
 n = int(input("Enter the number of terms: "))
 
 a, b = 0, 1
