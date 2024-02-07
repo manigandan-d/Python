@@ -1,6 +1,6 @@
 data = list(range(30))
 
-print(data)
+print(f"Original data: {data}")
 
 eveData = []
 oddData = []
@@ -12,5 +12,5 @@ for i in data:
     else:
         oddData.append(i)
         
-print(eveData)
-print(oddData)
+print(f"Even data: {eveData}")
+print(f"Odd data: {oddData}")
