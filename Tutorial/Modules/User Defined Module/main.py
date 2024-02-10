@@ -1,7 +1,8 @@
 import calc
 
 # import calc as c
-# from calc import add, sub, mul, div, floorDiv, mod
+# from calc import add, sub
+# from calc import add as c
 # from calc import *
 
 a = 5
