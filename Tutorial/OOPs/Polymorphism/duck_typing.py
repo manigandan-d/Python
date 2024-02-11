@@ -14,11 +14,13 @@ class PyCharm:
         print("compile")
         print("run")
 
-class Code:
-    def __init__(self, ide):
+class Laptop:
+    def code(self, ide):
         ide.execute()
 
 cpp_ide = VSCode()
 python_ide = PyCharm()
 
-palindrome = Code(python_ide)
+lap1 = Laptop()
+# lap1.code(cpp_ide)
+lap1.code(python_ide)
