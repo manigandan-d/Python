@@ -1,16 +1,13 @@
-import random
+data = [2, 4, 6, 8, 10]
 
-num = random.randint(1, 10)
+# for i in data:
+#     print(i)
 
-guess = int(input("Enter a number between 1 and 10: "))
 
-while guess != num:
-    if guess < num:
-        print("Your guess is too low")
-        
-    elif guess > num: 
-        print("Your guess is too high")
-        
-    guess = int(input("Guess again: "))
-    
-print("You guessed it!")
+it = iter(data)
+
+# for i in data:
+#     print(it.__next__())
+
+for i in data: 
+    print(next(it))
