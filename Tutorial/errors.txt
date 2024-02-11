@@ -1,9 +1,0 @@
-SyntaxError 			 ->  print("Hello World"
-NameError 				 -> 	print(a) - 'a' is not defined
-TypeError				 -> 	5 + "md"
-ValueError				 -> 	5 + int("md")
-IndentationError		 ->  unnecessary indent
-AttributeError			 ->  a.var - 'A' object has not attribute 'a'
-FileExistsError 		 ->  fobj = open("test.txt", "x") - executing in second times
-FileNotFoundError		 ->  fobj = open("sample.txt", "r") - opening the non-exist file to read/write 
-io.UnsupportedOperation  ->  fobj = open("test.txt", "r") - trying to write 
