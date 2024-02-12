@@ -1,13 +1,12 @@
-data = [2, 4, 6, 8, 10]
+data = list(map(int, input().strip()))
 
-# for i in data:
-#     print(i)
+x = data[0]
+k = data[1]
 
+res = x ** 3 + x ** 2 + x + 1
 
-it = iter(data)
-
-# for i in data:
-#     print(it.__next__())
-
-for i in data: 
-    print(next(it))
+if res == k:
+    print(True)
+    
+else:
+    print(False)
