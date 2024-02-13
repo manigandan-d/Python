@@ -1,18 +1,22 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
 
-data = list(map(int, input().split()))
-polynomial = input()
+def find_captains_room(group_size, room_numbers):
+	room_count = defaultdict(int)
 
-x = data[0]
-k = data[1]
+	print(room_count)
 
-polynomial = polynomial.replace("x", str(x))
+	for room in room_numbers:
+		room_count[room] += 1
 
-res = eval(polynomial)
+	print(room_count)
 
-if res == k:
-    print(True)
-    
-else:
-    print(False)
+	for room, count in room_count.items():
+		if count == 1:
+			return room
+
+group_size = int(input())
+room_numbers = list(map(int, input().split()))
+
+captains_room = find_captains_room(group_size, room_numbers)
+print(captains_room)
 
