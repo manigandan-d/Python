@@ -1,22 +1,37 @@
-from collections import defaultdict
+import re
 
-def find_captains_room(group_size, room_numbers):
-	room_count = defaultdict(int)
+pwd = input("Enter the password: ")
 
-	print(room_count)
+pwdLen = len(pwd)
 
-	for room in room_numbers:
-		room_count[room] += 1
+isValid = False
 
-	print(room_count)
+while True:
+	if pwdLen < 7 or pwdLen > 20:
+		break
+		
+	elif not re.search("[A-Z]", pwd):
+		break
+		
+	elif not re.search("[a-z]", pwd):
+		break
+		
+	elif not re.search("[0-9]", pwd):
+		break
+		
+	elif not re.search("[$#@!]", pwd):
+		break
+		
+	elif re.search("\s", pwd):
+		break
+		
+	else:
+		isValid = True
+		break
 
-	for room, count in room_count.items():
-		if count == 1:
-			return room
-
-group_size = int(input())
-room_numbers = list(map(int, input().split()))
-
-captains_room = find_captains_room(group_size, room_numbers)
-print(captains_room)
+if isValid == True:
+	print("Password is valid")
+	
+else:
+	print("Password is invalid")
 
