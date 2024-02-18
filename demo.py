@@ -1,37 +1,29 @@
-import re
+def minion_game(data):
+    data = data.strip()
+    
+    vowels = "AEIOU"
+    
+    stuart_score = 0
+    kevin_score = 0
+    
+    length = len(data)
 
-pwd = input("Enter the password: ")
+    for i in range(length):
+        if data[i] in vowels:
+            kevin_score += length - i
+            
+        else:
+            stuart_score += length - i
 
-pwdLen = len(pwd)
+    if stuart_score > kevin_score:
+        print("Stuart", stuart_score)
+        
+    elif kevin_score > stuart_score:
+        print("Kevin", kevin_score)
+        
+    else:
+        print("Draw")
 
-isValid = False
-
-while True:
-	if pwdLen < 7 or pwdLen > 20:
-		break
-		
-	elif not re.search("[A-Z]", pwd):
-		break
-		
-	elif not re.search("[a-z]", pwd):
-		break
-		
-	elif not re.search("[0-9]", pwd):
-		break
-		
-	elif not re.search("[$#@!]", pwd):
-		break
-		
-	elif re.search("\s", pwd):
-		break
-		
-	else:
-		isValid = True
-		break
-
-if isValid == True:
-	print("Password is valid")
-	
-else:
-	print("Password is invalid")
-
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
