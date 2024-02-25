@@ -1,6 +1,7 @@
-n=5
+n = 5
 
-for i in range(n):
-    for j in range(5, i, -1):
-        print("*", end="")
+for row in range(1, n*2):
+    for col in range(1, n*2):
+        atEveryIndex = 34
+        print(atEveryIndex)
     print()
